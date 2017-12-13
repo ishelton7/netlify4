@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Ian&#39;s Data Science Blog</title>
+    <link>/tags/development/</link>
+    <description>Recent content in Development on Ian&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Histograms</title>
+      <link>/post/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/hugoisforlovers/</guid>
+      <description>Histograms use only one column of data which is shown below when we look for player weights from the Master table.
+library(Lahman) library(sqldf) library(ggplot2) query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot; result&amp;lt;-sqldf(query) #visualizing the data ggplot()+ geom_histogram(data=result,aes(x=weight),color=&amp;quot;green&amp;quot;,fill=&amp;quot;black&amp;quot;,bins=50)+ ggtitle(&amp;quot;Baseball Player Body-Weight Distribution&amp;quot;)  </description>
+    </item>
+    
+  </channel>
+</rss>

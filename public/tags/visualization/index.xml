@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on Ian&#39;s Data Science Blog</title>
+    <link>/tags/visualization/</link>
+    <description>Recent content in Visualization on Ian&#39;s Data Science Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bar Plots</title>
+      <link>/post/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/creating-a-new-theme/</guid>
+      <description>Within this post we will be looking at visualization using Bar Plots.
+llibrary(Lahman) library(sqldf) library(devtools) library(ggplot2) # extracting the data---------------------------- query&amp;lt;-&amp;quot;SELECT name,HR FROM Teams Where yearID=1980 ORDER BY HR&amp;quot; result&amp;lt;-sqldf(query) result$name&amp;lt;-factor(result$name,levels=result$name) # visualizing the data----------------------------- ggplot()+ geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;,color=&#39;blue&#39;,fill=&#39;white&#39;)+ coord_flip()+ ylab(&amp;quot;homeruns&amp;quot;)+ xlab(&amp;quot;team&amp;quot;)+ ggtitle(&amp;quot;1980 Team Homerun Distribution&amp;quot;)  </description>
+    </item>
+    
+    <item>
+      <title>Time Series </title>
+      <link>/post/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/goisforlovers/</guid>
+      <description>This Time Series will display Babe Ruth&amp;rsquo;s homerun total trends over the years.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) query&amp;lt;-&amp;quot;SELECT yearID,HR FROM Batting WHERE playerID=&#39;ruthba01&#39;&amp;quot; result&amp;lt;-sqldf(query) ggplot()+ geom_line(data=result,aes(x=yearID,y=HR),color=&amp;quot;green&amp;quot;)+ ggtitle(&amp;quot;Ruth&#39;s Homerun Totals Throughout the Year&amp;quot;)+ xlab(&amp;quot;Year&amp;quot;)+ ylab(&amp;quot;Homeruns&amp;quot;)  </description>
+    </item>
+    
+  </channel>
+</rss>
